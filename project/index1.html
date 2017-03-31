@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+
+        .menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .product a {
+            position: relative;
+            font-size: 11px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+
+        }
+        
+        .product-1  {
+            text-align: center;
+            margin-top: 10px; 
+            padding-bottom: 5px;
+
+        }
+
+        .product-1 img {
+            margin-bottom: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        div.product:hover , div.help:hover {
+            background: #fff;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="container-fluid row"  style="background-color:#fed700;height: 55px" >
+            <nav class="container navbar container-fluid">
+
+                    <!-- Thanh search box -->
+                    <div class="col-md-5 brand container-fluid">
+                        <div class="col-md-4 brand-1">
+                            <a href=""><img src="image/logo5.jpg" alt="top_banner" class="img-responsive "></a>
+                        </div>
+
+                        <div class="col-md-8 brand-2">
+                            <form class="search-form" action="" method="get" role="search">
+                                <input type="text" class="form-control topinput"  placeholder="Tìm kiếm">                          
+                                <button type="submit" class="btn btn-primary btntop"><i class="glyphicon glyphicon-search"></i></button> 
+                            </form>
+                        </div>              
+                    </div>
+                    <!-- End thanh search box -->
+
+                    <!-- Thanh menu -->
+                    <div class="col-md-7 menu container-fluid">
+                        <div class="col-md-2 product">
+                            <a href="#">
+                                <div class="product-1">
+                                    <img src="image/product.png" alt="product"><br/>
+                                    <span>Sản phẩm</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2 product">
+                            <a href="#">
+                                <div class="product-1">
+                                    <img src="image/help.ico" alt="product"><br/>
+                                    <span>Sản phẩm</span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+
+        </header>    
+
+        <div class="container">
+
+
+
+
+
+
+            <div class="container-fluid" style="height:1000px">
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+             <h1>Some text to enable scrolling</h1>
+         </div>
+
+     </div>
+
+ </div>
+ <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+ <script type="text/javascript">
+
+    jQuery(document).ready(function() {    
+        var top_banner = $(".row-1");
+
+
+        $(window).scroll(function(){
+
+            if($(this).scrollTop()>150){ 
+                top_banner.hide();
+                $("nav").addClass('fixed');
+            }
+            else {
+
+              top_banner.show();
+              $("nav").removeClass('fixed');
+          }
+      })
+    })
+</script>
+
+</body>
+</html>
